@@ -867,7 +867,7 @@ class templatesedit
             if (!empty($data['type']) && $data['type'] == 'image' && $this->params['showTvImage']) {
                 $field .= $this->form('thumb', [
                     'name' => $isTv ? 'tv' . $data['id'] : $key,
-                    'value' => $isTv ? ($data['value'] ? MODX_SITE_URL . $data['value'] : '') : ($value ? MODX_SITE_URL . $value : ''),
+                    'value' => $isTv ? ($data['value'] ? MODX_SITE_URL . $data['value'] : '') : ($value ? MODX_SITE_URL . $value : '../'.$data['value']),
                     'width' => $this->evo->config['thumbWidth']
                 ]);
             }
